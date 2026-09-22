@@ -1,5 +1,7 @@
 ---
-layout: archive
+layout: folio
+prose: true
+eyebrow: "BACKGROUND / EXPERIENCE"
 title: "CV"
 permalink: /cv/
 author_profile: true
@@ -11,12 +13,15 @@ redirect_from:
 
 Education
 ======
+* **Columbia University**, New York, NY
+  * First-year PhD student in [Industrial Engineering and Operations Research](https://ieor.columbia.edu/)
+
 * **Shanghai University of Finance and Economics (SUFE)**, Shanghai, China
-  * Undergraduate of Engineering in Data Science and Big Data Technology
+  * Undergraduate studies in Data Science and Big Data Technology — graduated
   * Pilot Class of Research Institute for Interdisciplinary Science
   * **GPA:** 3.81/4.0
   * **Rank:** 4/127
-  * Sept 2022 - Present
+  * Entered September 2022; graduated
 
 Awards
 ======

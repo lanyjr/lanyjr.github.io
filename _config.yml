@@ -11,12 +11,12 @@ locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
 title                    : "Yijin Ren"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
+name                     : &name "Yijin Ren"
+description              : &description "Yijin Ren — first-year PhD student at Columbia IEOR, working on pre-training and first-order methods, and exploring reinforcement learning."   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://lanyjr.github.io/ # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+repository               : "lanyjr/lanyjr.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -26,11 +26,11 @@ author:
   avatar           : "headshot.png"
   name             : "Yijin Ren"
   pronouns         : # example: "she/her"  
-  bio              : "An undergraduate student."
-  location         : "Earth"
+  bio              : "First-year PhD student at Columbia IEOR."
+  location         : "New York, NY"
   #employer         : "Red Brick University"
   uri              : #https://lanyjr.github.io/
-  email            : "1316473991@qq.com" 
+  email            : "yr2549@columbia.edu"
 
   # Academic websites
   academia         : # URL
@@ -48,7 +48,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : #"academicpages"
+  github           : "lanyjr"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -187,6 +187,7 @@ exclude:
   - package.json*
   - Rakefile
   - README
+  - HOMEPAGE.md
   - tmp
   - vendor
 keep_files:

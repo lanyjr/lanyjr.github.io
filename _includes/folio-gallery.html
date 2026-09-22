@@ -1,0 +1,5 @@
+<div class="photo-grid">
+{% for photo in include.photos %}
+  <figure class="photo-card"><a class="photo-link" href="{{ photo.image | relative_url }}" data-caption="{{ photo.caption | default: photo.title | escape }}"><img src="{{ photo.image | relative_url }}" alt="{{ photo.alt | default: photo.title | escape }}" loading="lazy" decoding="async"><span class="photo-expand" aria-hidden="true">↗</span></a><figcaption><h3>{{ photo.title | escape }}</h3>{% if photo.location or photo.date %}<p class="photo-location">{{ photo.location | escape }}{% if photo.location and photo.date %} · {% endif %}{{ photo.date | escape }}</p>{% endif %}{% if photo.caption %}<p>{{ photo.caption | escape }}</p>{% endif %}</figcaption></figure>
+{% endfor %}
+</div>

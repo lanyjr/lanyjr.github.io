@@ -1,0 +1,12 @@
+---
+layout: folio
+title: "Away from the desk."
+permalink: /travel/
+eyebrow: "TRAVEL / A PERSONAL JOURNAL"
+description: "Places, photographs, and the moments in between."
+---
+<section aria-labelledby="travel-gallery-title">
+  <div class="section-heading"><h2 id="travel-gallery-title">Travel journal</h2><span class="small-note">A DIFFERENT PERSPECTIVE</span></div>
+  {% if site.data.travel.size > 0 %}{% include folio-gallery.html photos=site.data.travel %}
+  {% else %}<div class="travel-empty"><svg class="travel-landscape" viewBox="0 0 840 240" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="1"><path d="M0 193L145 89L282 184L433 38L642 212L760 106L840 171"/><path d="M0 217L145 113L282 208L433 62L642 236L760 130L840 195"/><path d="M0 241L145 137L282 232L433 86L642 260L760 154L840 219"/><path d="M0 265L145 161L282 256L433 110L642 284L760 178L840 243"/><circle cx="641" cy="61" r="27"/><path d="M52 38h32m-16-16v32"/></g></svg><p class="eyebrow">THE JOURNAL IS JUST BEGINNING</p><h3>More places. More perspectives.</h3><p>Travel notes and photographs, coming soon.</p></div>{% endif %}
+</section>

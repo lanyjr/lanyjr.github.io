@@ -1,12 +1,16 @@
 ---
-layout: archive
-title: "Teaching"
+layout: folio
+title: "Teaching."
 permalink: /teaching/
-author_profile: true
+eyebrow: "LEARNING / TOGETHER"
+description: "Courses, shared ideas, and moments from the classroom."
 ---
-
-{% include base_path %}
-
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<section aria-labelledby="experience-title">
+  <div class="section-heading"><h2 id="experience-title">Teaching experience</h2><span class="small-note">SUFE</span></div>
+  {% for course in site.data.teaching %}
+  <article class="teaching-row"><div class="teaching-year">{{ course.year }}</div><div><p class="eyebrow">{{ course.role }}</p><h3>{{ course.title }}</h3><p>{{ course.institution }}</p><p class="course-detail">{{ course.period }} <span aria-hidden="true">·</span> Instructor: Prof. {{ course.instructor }}</p></div></article>
+  {% endfor %}
+</section>
+<section class="gallery-section" aria-labelledby="teaching-gallery-title"><div class="section-heading"><h2 id="teaching-gallery-title">From the classroom</h2><span class="small-note">NOTES & PHOTOGRAPHS</span></div>
+{% if site.data.teaching_photos.size > 0 %}{% include folio-gallery.html photos=site.data.teaching_photos %}{% else %}<div class="quiet-placeholder"><span class="placeholder-mark" aria-hidden="true">✳</span><div><h3>A space for shared moments.</h3><p>Teaching notes and photographs will appear here.</p></div></div>{% endif %}
+</section>

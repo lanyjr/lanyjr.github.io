@@ -1,36 +1,17 @@
 ---
-layout: archive
-title: "Publications"
+layout: folio
+title: "Publications & research."
 permalink: /publications/
-author_profile: true
+eyebrow: "RESEARCH / SELECTED WORK"
+description: "Pre-training, first-order methods, and questions in reinforcement learning."
 ---
-
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
-{% include base_path %}
-
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+<section class="research-list" aria-labelledby="publications-title">
+  <div class="section-heading"><h2 id="publications-title">Publications</h2><span class="small-note">{{ site.publications.size }} publication{% unless site.publications.size == 1 %}s{% endunless %}</span></div>
+  {% for post in site.publications reversed %}{% include folio-publication.html %}{% endfor %}
+</section>
+<section class="ongoing-section" aria-labelledby="ongoing-title">
+  <div class="section-heading"><div><p class="section-number">ON THE DESK</p><h2 id="ongoing-title">Ongoing work</h2></div><span class="work-status"><span class="status-dot" aria-hidden="true"></span> IN PROGRESS</span></div>
+  {% if site.data.ongoing.size > 0 %}
+  {% for project in site.data.ongoing %}<article class="ongoing-item"><h3>{% if project.url %}<a href="{{ project.url | relative_url }}">{{ project.title | escape }}</a>{% else %}{{ project.title | escape }}{% endif %}</h3><p>{{ project.description | escape }}</p></article>{% endfor %}
+  {% else %}<div class="quiet-placeholder"><span class="placeholder-mark" aria-hidden="true">↗</span><div><h3>More in the making.</h3><p>Projects in progress. Details will be shared here as they develop.</p></div></div>{% endif %}
+</section>
